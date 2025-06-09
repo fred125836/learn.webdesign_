@@ -1,5 +1,6 @@
 from PIL import Image
 import streamlit as st
+from datetime import datetime
 
 # find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
@@ -71,11 +72,23 @@ with st.container():
     with right_column:
         st.empty()
 # ---- TITLE ----
-st.title("User Input in Streamlit")
+st.title("TRY THIS OUT")
+st.title("Streamlit App with datetime Module")
+current_time = datetime.now().year
 name = st.text_input("Enter your name:")
 age = st.number_input("Enter your age:", min_value=0, max_value=120)
 favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "Other"])
 if st.button("Submit"):
     st.write(f"Hello, **{name}**! 👋")
-    st.write(f"You are *{age}** years old.")
+    st.write(f"You are **{age}** years old. And your birth year is **{age - current_time }**")
     st.write(f"Your favorite color is *{favorite_color}**.")
+
+
+
+
+
+
+# Display the current date and time
+
+st.write("Current Date and Time:", current_time)
+

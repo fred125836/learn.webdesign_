@@ -75,11 +75,12 @@ with st.container():
 st.title("TRY THIS OUT")
 st.title("Streamlit App with datetime Module")
 current_time = datetime.now().year
-name = st.text_input("Enter your name:")
+first_name = st.text_input("Enter your first name:")
+second_name = st.text_input("Enter your second name:")
 age = st.number_input("Enter your age:", min_value=0, max_value=120)
-favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "Other"])
+favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "violet", "Other"])
 if st.button("Submit"):
-    st.write(f"Hello, **{name}**! 👋")
+    st.write(f"Hello, **{first_name + second_name}**! 👋")
     st.write(f"You are **{age}** years old. And your birth year is **{current_time - age }**")
     st.write(f"Your favorite color is *{favorite_color}**.")
 

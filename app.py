@@ -11,7 +11,7 @@ img_contact_form = Image.open("images/microsoft_office.jpeg")
 img_lottie_animation = Image.open("images/web_dev.png")
 # ---- HEADER SECTION ----
 with st.container():
-    st.subheader("My name is Onwuegbuna Okwuchukwu :wave:")
+    st.subheader("My name is Hoodricch :wave:")
     st.title("I am a Typist, Graphic Designer, and Forex Enthusiast from Nigeria")
     st.write("I am passionate about Web Development")
     st.write("you are welcome to my page")

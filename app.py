@@ -1,12 +1,19 @@
 from PIL import Image
+import requests
 import streamlit as st
+from strealmit_lottie import st_lottie
 
 # find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
 
-
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # ---- LOAD ASSETS ----
+lottie_coding = load_lottieurl("https://lottie.host/fc0153da-fac2-4fdb-bebb-7baf6d15a175/91AkjmPx5Y.json")
 img_contact_form = Image.open("images/microsoft_office.jpeg")
 img_lottie_animation = Image.open("images/web_dev.png")
 # ---- HEADER SECTION ----
@@ -16,6 +23,24 @@ with st.container():
     st.write("I am passionate about Web Development")
     st.write("you are welcome to my page")
     st.write("[contact me on whatsapp >](https://wa.me/message/CL576QP54YBPP1)")
+# ---- RANDOM ----
+with st.container():
+    st.write("---")
+    left_column, right_column = st.column(2)
+    with left_column:
+        st.header("RANDOM")
+        st.write("##")
+        st.write(
+            """
+            ON MY WHATSAPP CHANNEL
+            - WANT TO LEARN DATA ANALYSIS & DATA SCIENCE TO PERFORM MEANINGFUL AND IMPACTFUL ANALYSIS
+            - ARE YOU STRUGGLING WITH REPETITIVE TASK IN EXCEL
+            - ARE YOU WORKING WITH EXCEL AND FOUND YOURSELF THINKING  - "THESE HAS TO BE A BETTER WAY
+            IF THIS SOUND INTEREESTING TO YOU, KINDLY CONTACT ME ABOVE
+            """
+        )
+        with right_column:
+            st_lottie(lottie_coding, height=300, key="coding")
 
 # ---- PROJECTS ----
 with st.container():

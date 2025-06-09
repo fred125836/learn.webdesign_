@@ -70,3 +70,12 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.empty()
+# ---- TITLE ----
+st.title("User Input in Streamlit")
+name = st.text_input("Enter your name:")
+age = st.number_input("Enter your age:", min_value=0, max_value=120)
+favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "Other"])
+if st.button("Submit"):
+    st.write(f"Hello, *{name}*! 👋")
+    st.write(f"You are *{age}* years old.")
+    st.write(f"Your favorite color is *{favorite_color}*.")

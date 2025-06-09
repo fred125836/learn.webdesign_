@@ -26,7 +26,7 @@ with st.container():
     with image_column:
         st.image(img_lottie_animation)
     with text_column:
-        st.subheader("CONTACT ME TO LEARN GRAPHIC DESIGNING AND WEB DEVELOPMENT")
+        st.subheader("CONTACT ME IF YOU ARE INTERESTED IN ANY OF MY SERVICES BELOW")
         st.write(
             """
             WHAT YOU WILL BE LEARNING FROM ME

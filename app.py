@@ -83,12 +83,5 @@ if st.button("Submit"):
     st.write(f"You are **{age}** years old. And your birth year is **{age - current_time }**")
     st.write(f"Your favorite color is *{favorite_color}**.")
 
-
-
-
-
-
-# Display the current date and time
-
-st.write("Current Date and Time:", current_time)
+st.write("Current year:", current_time)
 

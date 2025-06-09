@@ -73,7 +73,7 @@ with st.container():
         st.empty()
 # ---- TITLE ----
 st.title("TRY THIS OUT")
-st.title("Streamlit App with datetime Module")
+st.title("CHECK YOUR DATE OF BIRTH")
 current_time = datetime.now().year
 first_name = st.text_input("Enter your first name:")
 second_name = st.text_input("Enter your second name:")

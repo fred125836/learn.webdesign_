@@ -19,7 +19,7 @@ img_lottie_animation = Image.open("images/web_dev.png")
 # ---- HEADER SECTION ----
 with st.container():
     st.subheader("My name is Hoodricch :wave:")
-    st.title("I am a Typist, Graphic Designer, and Forex Enthusiast from Nigeria")
+    st.title("I am a Typist, Graphic Designer, and Forex Enthusiast from Anambra State, Nigeria")
     st.write("I am passionate about Web Development")
     st.write("you are welcome to my page")
     st.write("[contact me on whatsapp >](https://wa.me/message/CL576QP54YBPP1)")

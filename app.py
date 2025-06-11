@@ -2,6 +2,14 @@ from PIL import Image
 import streamlit as st
 from datetime import datetime
 
+hide_st_style = """
+            ‹style>
+            #MainMenu {visibility: hidden;} 
+            footer {visibility: hidden;}
+            ‹/style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
 
@@ -86,11 +94,4 @@ if st.button("Submit"):
 
 st.write("Current year:", current_time)
 
-hide_st_style = """
-            ‹style>
-            #MainMenu {visibility: hidden;} 
-            footer {visibility: hidden;}
-            ‹/style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
 

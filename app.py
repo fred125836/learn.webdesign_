@@ -2,6 +2,10 @@ from PIL import Image
 import streamlit as st
 from datetime import datetime
 
+
+# find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
+st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
+
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -10,11 +14,6 @@ hide_streamlit_style = """
     </style>
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-# find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
-
-
 
 # ---- LOAD ASSETS ----
 img_contact_form = Image.open("images/microsoft_office.jpeg")

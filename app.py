@@ -3,6 +3,7 @@ import streamlit as st
 from datetime import datetime
 
 
+
 # find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
 
@@ -23,7 +24,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ---- HEADER SECTION ----
 with st.container():
-    st.subheader("My name is Hoodricch :wave:")
+    st.subheader("My name is Onwuegbuna Okwuchukwu :wave:")
     st.title("I am a Typist, Graphic Designer, and Forex Enthusiast from Nigeria")
     st.write("I am passionate about Web Development")
     st.write("you are welcome to my page")
@@ -38,7 +39,7 @@ with st.container():
     with image_column:
         st.image(img_lottie_animation)
     with text_column:
-        st.subheader("CONTACT ME IF YOU ARE INTERESTED IN ANY OF MY SERVICES BELOW")
+        st.subheader("CONTACT ME TO LEARN GRAPHIC DESIGNING AND WEB DEVELOPMENT")
         st.write(
             """
             WHAT YOU WILL BE LEARNING FROM ME
@@ -60,23 +61,37 @@ with st.container():
             - LEARN HOW TO USE SPREADSHEET WITH EXCEL
             """
         )
+
+with st.container():
+    st.subheader("TRY THIS OUT :smile:")
+    st.title("CHECK YOUR DATE OF BIRTH :baby:")
+    current_time = datetime.now().year
+    first_name = st.text_input("Enter your first name:")
+    second_name = st.text_input("Enter your second name:")
+    age = st.number_input("Enter your age:", min_value=0, max_value=120)
+    favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "violet", "okwuchukwu", "Other"])
+    if st.button("Submit"):
+        st.write(f"Hello, **{first_name + second_name}**! 👋")
+        st.write(f"You are **{age}** years old. And your birth year is **{current_time - age }**")
+        st.write(f"Your favorite color is *{favorite_color}**.")
+
+st.write("Current year:", current_time)
+
 # ---- CONTACT ----
 with st.container():
     st.write("---")
     st.header("Get in touch with me")
     st.write("##")
 
-
-
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
     <form action="https://formsubmit.co/jessicasmith22025@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
-         <input type="text" name="name" placeholder="Your name" required>
-         <input type="email" name="email" placeholder="Your email" required>
-         <textarea name="message" placeholder="Your message here" required></textarea>
-         <textarea name="schoolname" placeholder="your school name here" required></textarea>
-         <button type="submit">Send</button>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message here" required></textarea>
+        <textarea name="schoolname" placeholder="your school name here" required></textarea>
+        <button type="submit">Send</button>
     </form>
     """
     left_column, right_column = st.columns(2)
@@ -84,19 +99,4 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.empty()
-# ---- TITLE ----
-st.title("TRY THIS OUT")
-st.title("CHECK YOUR DATE OF BIRTH")
-current_time = datetime.now().year
-first_name = st.text_input("Enter your first name:")
-second_name = st.text_input("Enter your second name:")
-age = st.number_input("Enter your age:", min_value=0, max_value=120)
-favorite_color = st.selectbox("Select your favorite color:", ["Red", "Green", "Blue", "violet", "Other"])
-if st.button("Submit"):
-    st.write(f"Hello, **{first_name + second_name}**! 👋")
-    st.write(f"You are **{age}** years old. And your birth year is **{current_time - age }**")
-    st.write(f"Your favorite color is *{favorite_color}**.")
-
-st.write("Current year:", current_time)
-
 

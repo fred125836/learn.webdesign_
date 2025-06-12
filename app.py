@@ -11,6 +11,16 @@ st.set_page_config(page_title="Hello World", page_icon=":tada:", layout="wide")
 # ---- LOAD ASSETS ----
 img_contact_form = Image.open("images/microsoft_office.jpeg")
 img_lottie_animation = Image.open("images/web_dev.png")
+
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # ---- HEADER SECTION ----
 with st.container():
     st.subheader("My name is Hoodricch :wave:")

@@ -66,14 +66,7 @@ with st.container():
     st.header("Get in touch with me")
     st.write("##")
 
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
-    </style>
-    """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
